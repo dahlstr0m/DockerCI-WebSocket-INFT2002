@@ -53,5 +53,5 @@ test-server:
   stage: test
   script:
     - cd server
-    - touch ./src/config.js ./test/config.js #adds empty config files for server test
+    - touch ./test/config.js #adds empty config files for server test
     - npm test
