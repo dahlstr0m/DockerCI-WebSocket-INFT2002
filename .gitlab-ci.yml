@@ -1,14 +1,8 @@
 image: node:latest
 
 stages:
-  - addConfig
   - build
   - test
-
-addConfigFiles:
-  stage: addConfig
-  script:
-    - touch server/src/config.js server/test/config.js
 
 install-client:
   stage: build
@@ -23,6 +17,7 @@ install-server:
   stage: build
   script:
     - cd server
+    - touch ./src/config.js ./test/config.js
     - npm install
   artifacts:
     paths:
