@@ -1,8 +1,14 @@
 image: node:latest
 
 stages:
+  - addConfig
   - build
   - test
+
+addConfigFiles:
+  stage: addConfig
+  script:
+    - touch server/src/config.js server/test/config.js
 
 install-client:
   stage: build
@@ -26,13 +32,12 @@ prettier-client:
   stage: test
   script:
     - cd client
-    - ./node_modules/.bin/prettier -- check client/src/**/*.js client/test/**/*.js
+    - ./client/node_modules/.bin/prettier --check client/src/**/*.js client/test/**/*.js
 
 prettier-server:
   stage: test
   script:
-    - cd server
-    - ./node_modules/.bin/prettier -- check server/src/**/*.js server/test/**/*.js
+    - ./server/node_modules/.bin/prettier --check server/src/**/*.js server/test/**/*.js
 
 flow-client:
   stage: test
