@@ -25,7 +25,6 @@ install-server:
 prettier-client:
   stage: test
   script:
-    - cd client
     - ./client/node_modules/.bin/prettier --check client/src/**/*.js client/test/**/*.js
 
 prettier-server:
