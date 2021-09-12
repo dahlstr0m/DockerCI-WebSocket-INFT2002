@@ -1,6 +1,10 @@
-# WebSocket example: Whiteboard
+# Practice task in INFT2002 Web Development
+Fall 2020
+Task was to run test in a CI with Docker and GitLab. The app is a simple whiteboard app using WebSocket to connect a user to the whiteboard.
 
-## Setup database connections
+## WebSocket example: Whiteboard
+
+### Setup database connections
 
 This example does not use any database. You can therefore create empty `config.js` files:
 
@@ -8,7 +12,7 @@ This example does not use any database. You can therefore create empty `config.j
 touch server/src/config.js server/test/config.js
 ```
 
-## Start server
+### Start server
 
 Install dependencies and start server:
 
@@ -18,7 +22,7 @@ npm install
 npm start
 ```
 
-### Run server tests:
+#### Run server tests:
 
 ```sh
 npm test
@@ -27,7 +31,7 @@ npm test
 Compared to the previous example project, the only additional dependency is
 [ws](https://www.npmjs.com/package/ws).
 
-## Bundle client files to be served through server
+### Bundle client files to be served through server
 
 Install dependencies and bundle client files:
 
@@ -37,7 +41,7 @@ npm install
 npm start
 ```
 
-### Run client tests:
+#### Run client tests:
 
 ```sh
 npm test
