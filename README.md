@@ -1,4 +1,4 @@
-# Practice task in INFT2002 Web Development
+# Practice task in Web Development [INFT2002](https://www.ntnu.no/studier/emner/INFT2002)
 Fall 2020
 Task was to run test in a CI with Docker and GitLab. The app is a simple whiteboard app using WebSocket to connect a user to the whiteboard.
 
